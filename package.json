@@ -5,14 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:docs": "astro dev"
+    "docs:build": "cd docs && pnpm build"    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.8",
-    "astro": "^5.8.1",
-    "tailwindcss": "^4.1.8"
+
   }
 }
