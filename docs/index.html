@@ -1,13 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Docs for RunTypes</title>
+  <link href="/src/styles.css" rel="stylesheet">
+</head>
+
+<body class="flex min-h-full bg-white antialiased dark:bg-zinc-900 dark:text-zinc-100">
+  <div class="pt-16 px-8">
+    <h1 class="text-3xl font-bold">
+      Run Types
+    </h1>
+    <p class="mt-2 text-zinc-400">A collection of types and utils for managing dynamically typed objects at runtime</p>
+    <hr class="border-zinc-400 my-4">
+    <h2 class="text-xl text-zinc-300 font-bold mt-6">
+      Base Type Definition
+    </h2>
+    <p class="mt-2 text-zinc-400">
+      All RunType type definitions share the following structure
+
+    </p>
+      <pre class="bg-zinc-700 rounded-sm px-1 py-0.5">
+      {
+        "__type": ""
+      }
+    </pre>
+
+    <h2 class="text-xl text-zinc-300 font-bold mt-6">
+      Native Types
+    </h2>
+    <p class="mt-2 text-zinc-400">Platform-specific types. Currently supported are <code
+        class="bg-zinc-700 rounded-sm px-1 py-0.5">string</code>, <code class="bg-zinc-700 rounded-sm  px-1 py-0.5">number</code>, and
+      <code class="bg-zinc-700 rounded-sm px-1 py-0.5">boolean</code></p>
+
+  </div>
+</body>
+
+<script src="./src//main.ts"></script>
+
 </html>
