@@ -3,23 +3,18 @@ import {
     BundledTheme,
     codeToHtml,
     createHighlighter
-  } from 'shiki/bundle/web'
-  
-  const highlighter = await createHighlighter({
-    langs: ['html', 'css', 'js'],
-    themes: ['github-dark', 'github-light'],
-  })
+} from 'shiki/bundle/web'
 
-const code = 'const a = 1' // input code
-const html = await codeToHtml(code, {
-  lang: 'javascript',
-  theme: 'vitesse-dark'
-})
 
-console.log(html) // highlighted html string
+async function highlight_code() {
+    const highlighter = await createHighlighter({
+        langs: ['html', 'css', 'js', 'json'],
+        themes: ['github-dark', 'github-light'],
+    })
 
-function highlight_code(){
-    document.querySelectorAll('pre').forEach(pre => {
-        highlighter.
+    document.querySelectorAll('pre[lang]').forEach(pre => {
+        pre.innerHTML = highlighter.codeToHtml((pre as HTMLElement).innerText, { lang: pre.getAttribute('lang') as string, theme: 'github-dark' })
     });
 }
+
+highlight_code();

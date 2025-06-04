@@ -15,29 +15,44 @@
     </h1>
     <p class="mt-2 text-zinc-400">A collection of types and utils for managing dynamically typed objects at runtime</p>
     <hr class="border-zinc-400 my-4">
-    <h2 class="text-xl text-zinc-300 font-bold mt-6">
+    <h2 class="text-xl text-zinc-300 font-bold mt-8">
       Base Type Definition
     </h2>
     <p class="mt-2 text-zinc-400">
-      All RunType type definitions share the following structure
+      All RunType type definitions share the following structure:
+</p>
+    <ul class="text-zinc-300 mt-6">
+      <li>
+        <code class="bg-zinc-800 rounded-sm px-1 py-0.5 outline outline-zinc-500">__type</code>
+        <span class="font-mono ml-3 text-zinc-500">string</span>
+        <p class="mt-2 text-zinc-400">
+          The name of the specific type, as defined below.
+          </p>
+      </li>
 
-    </p>
-      <pre class="bg-zinc-700 rounded-sm px-1 py-0.5">
-      {
-        "__type": ""
-      }
-    </pre>
+      <li class="mt-4">
+        <code class="bg-zinc-800 rounded-sm px-1 py-0.5 outline outline-zinc-500">constraints</code>
+        <span class="font-mono ml-3 text-zinc-500">Record&lt;string, unknown&gt;</span>
+        <p class="mt-2 text-zinc-400">
+          Any constraints applied to the type. See <a class="underline text-zinc-300">Contraints</a>.
+          </p>
+      </li>
+    </ul>
 
-    <h2 class="text-xl text-zinc-300 font-bold mt-6">
+      
+</p>
+
+
+    <h2 class="text-xl text-zinc-300 font-bold mt-8">
       Native Types
     </h2>
     <p class="mt-2 text-zinc-400">Platform-specific types. Currently supported are <code
-        class="bg-zinc-700 rounded-sm px-1 py-0.5">string</code>, <code class="bg-zinc-700 rounded-sm  px-1 py-0.5">number</code>, and
-      <code class="bg-zinc-700 rounded-sm px-1 py-0.5">boolean</code></p>
+        class="text-zinc-300 bg-zinc-800 rounded-sm px-1 py-0.5">string</code>, <code class="text-zinc-300 bg-zinc-800 rounded-sm  px-1 py-0.5">number</code>, and
+      <code class="text-zinc-300 bg-zinc-800 rounded-sm px-1 py-0.5">boolean</code>. These represent the types native to the web platform. Adding other types should be trivial.</p>
 
   </div>
 </body>
 
-<script src="./src//main.ts"></script>
+<script src="./src//main.ts" type="module"></script>
 
 </html>
